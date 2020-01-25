@@ -1,5 +1,5 @@
 # challengeFailleSQL
-un site web java qui sert de challenge pour l'exploitation des failles SQL
+un site web java qui propose un challenge pour l'exploitation des failles SQL
 
 **Techno**
       Spring boot | JQuery | Bootstrap | Tomcat | Maven
