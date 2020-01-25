@@ -16,6 +16,8 @@ Résolution
 2. Exploitation d'une faille SQL sur la page /666 avec le nom adéquat de l'administrateur
 
 Exemple  
+      
       login : admin' # 
+      
       password : saisi qui sera commenté quoi qu'il arrive..
   
