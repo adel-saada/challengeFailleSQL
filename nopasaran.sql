@@ -27,7 +27,7 @@ CREATE TABLE Utilisateur
 
 -- insertion Administrateur
 
-INSERT INTO Administrateur (nom,motDePasse) VALUES ("charlie","1234");
+INSERT INTO Administrateur (nom,motDePasse) VALUES ("marcos","?%azertyuiiopqsslskflcd?./");
 
 
 -- insertion Utilisateur
