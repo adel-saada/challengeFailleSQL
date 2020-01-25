@@ -2,6 +2,7 @@
 un site web java qui sert de challenge pour l'exploitation des failles SQL
 
 techno : Spring boot | JQuery | Bootstrap | Tomcat | Maven
+
 Ouverture faille MySQL : Utilisation de l'objet Statement au lieu de PrepareStatement  
 
 Installation
@@ -14,7 +15,7 @@ Résolution
 1. La page "/robots.txt" donne une indication sur le lien du formulaire "faillible" ainsi que le nom d'un admin du site web.
 2. Exploitation d'une faille SQL sur la page /666 avec le nom adéquat de l'administrateur
 
-Exemple :  
+Exemple  
       login : admin' # 
       password : saisi qui sera commenté quoi qu'il arrive..
   
