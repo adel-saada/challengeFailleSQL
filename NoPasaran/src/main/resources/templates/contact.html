@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}" /> 
+  <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}" />
+  <link href="css/form-style.css" rel="stylesheet" th:href="@{/css/form-style.css}" />
+  <link type="text/css" rel="stylesheet" th:href="@{/css/connexion.css}"/>
+
+  <title>Challenge</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="container-fluid">
+      <header class="page-header">        
+        <nav class="navbar fixed-top navbar-light bg-light Regular shadow">
+            <a class="navbar-nav lien-menu" href="/index" th:href="@{/}" >
+				<h1>
+                	<span class="yellow-logo">Game </span><span class="orange-logo">Over</span>
+                	<img class="logo-principal" src="images/icones/pumpkin.png" alt="" />				
+				</h1>
+           	</a>
+
+            <ul class="list-inline menu">
+              <li class="list-inline-item"><a class="nav-link link-etape1" th:href="@{/#etape-1}">Accès 1</a></li>
+              <li class="list-inline-item"><a class="nav-link link-etape2" th:href="@{/#etape-2}">Accès 2</a></li>
+              <li class="list-inline-item"><a class="nav-link link-etape3" th:href="@{/#etape-3}">Accès 3</a></li>
+              <li class="list-inline-item"><a class="nav-link link-contactez" th:href="@{/contact}">Interdit</a></li>
+            </ul> 
+        </nav>
+      </header>
+    </div>
+     
+		<div class="en-tete">
+			<div class="logo">
+				<h1></h1>			
+				<img src="" alt="">
+			</div>
+		</div>
+		
+		<div id="content">
+		
+	        <form th:action="@{/connexion}" method="POST" th:object="${utilisateur}" id="login-form" class="p-2">
+				<fieldset>
+					<p>
+						<label for="login-username">identifiant</label>
+						<input type="text" id="login-username" name="login-username"  th:field="*{nom}" class="round full-width-input" placeholder="identifiant" required autofocus />
+					</p>
+					<p>
+						<label for="login-password">mot de passe</label>
+						<input type="password" id="login-password" name="login-password"  th:field="*{motDePasse}"  class="round full-width-input" placeholder="mot de passe" required />
+					</p>
+					
+					<p class="center">
+				
+					    <label for="patient-radio" class="radio-inline">
+					    <input type="radio" id="patient-radio" name="login-radio" value="vivant" checked >Vivant
+					    </label>
+				
+					</p>
+					
+					<p>J'ai <a href="#">oublié mon mot de passe</a>.</p>
+					
+					
+					<div class="bouton-submit">
+						<input type="submit" value="connexion" />
+					</div>
+					
+				</fieldset>
+			</form>
+	        <div class="orange-logo" th:each="erreur : ${mapErreurs}">
+	        	<table>
+	        		<tr>
+	            		<td th:text="${erreur.value}">num</td>
+	        		</tr>
+	        	</table>
+	        </div>
+			
+		</div> 
+	<script src="js/bootstrap.js"></script>
+  	<script src="js/decoration-menu.js"></script>
+</body>
+</html>

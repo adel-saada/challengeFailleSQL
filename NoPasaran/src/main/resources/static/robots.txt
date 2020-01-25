@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 666
+admin : marcos
